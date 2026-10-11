@@ -1,0 +1,1240 @@
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: #171c17;
+  color: #f4f7f2;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  background: #1d231d;
+  border-right: 1px solid #303a30;
+}
+
+.brand-accent {
+  color: #a0f66a;
+}
+
+.tactical-card {
+  background: #222a22;
+  border: 1px solid #354035;
+  border-radius: 12px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: #b8c2b6;
+  text-align: left;
+  transition: background 150ms ease, color 150ms ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  background: #303c2d;
+  color: #a0f66a;
+}
+
+.primary-button {
+  background: #a0f66a;
+  color: #172116;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  transition: background 150ms ease;
+}
+
+.primary-button:hover {
+  background: #b5ff89;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+/* Public attendance landing page */
+.public-shell {
+  min-height: 100vh;
+  background: #ffffff;
+  color: #1f2937;
+}
+.welcome-shell {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 20px;
+  background: #fff;
+  color: #1f2937;
+}
+.landing-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+}
+.landing-brand { text-align: center; }
+.landing-mark, .welcome-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  color: #fff;
+  background: #228b4e;
+  box-shadow: 0 8px 24px rgba(34,139,78,.16);
+}
+.eyebrow {
+  margin: 0;
+  color: #228b4e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  line-height: 1.5;
+}
+.landing-brand h1 {
+  margin: 8px 0 0;
+  color: #1f2937;
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 850;
+  letter-spacing: -.04em;
+}
+.landing-brand h1 span { color: #228b4e; }
+.brand-subtitle {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .2em;
+}
+.landing-heading { margin: 42px 0 22px; text-align: center; }
+.landing-heading h2 {
+  margin: 7px 0 5px;
+  color: #1f2937;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+.landing-heading > p:last-child { margin: 0; color: #64748b; font-size: 15px; }
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+.choice-card {
+  position: relative;
+  display: flex;
+  min-height: 238px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 11px;
+  padding: 30px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+.choice-card:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(31,41,55,.09); }
+.choice-card:focus-visible, .welcome-cta:focus-visible, .back-link:focus-visible { outline: 3px solid #83c99a; outline-offset: 3px; }
+.choice-card-light { border-color: #c7e6d0; background: #f8fcf9; color: #1f2937; }
+.choice-card-light:hover { border-color: #228b4e; }
+.choice-card-green { background: #228b4e; color: #fff; }
+.choice-card-green:hover { background: #197640; }
+.choice-icon { display: flex; align-items: center; justify-content: center; width: 58px; height: 58px; border-radius: 16px; background: #eaf5ed; color: #228b4e; }
+.choice-card-green .choice-icon { background: rgba(255,255,255,.16); color: #fff; }
+.choice-title { font-size: clamp(19px, 2.4vw, 24px); font-weight: 800; line-height: 1.25; }
+.choice-description { max-width: 260px; font-size: 14px; line-height: 1.55; opacity: .82; }
+.choice-arrow { position: absolute; top: 30px; right: 28px; display: flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; background: rgba(34,139,78,.09); color: #228b4e; }
+.choice-card-green .choice-arrow { background: rgba(255,255,255,.15); color: #fff; }
+.landing-footer { display: flex; flex-direction: column; align-items: center; gap: 4px; margin-top: 30px; color: #64748b; font-size: 12px; }
+.landing-footer span:first-child { font-style: italic; }
+.leaf-decoration { position: absolute; width: 190px; height: 90px; border-radius: 100% 0 100% 0; background: #eaf5ed; opacity: .8; transform: rotate(-24deg); pointer-events: none; }
+.leaf-decoration-one { right: -90px; bottom: 20px; }
+.leaf-decoration-two { left: -130px; bottom: -25px; transform: rotate(28deg); }
+.back-link { position: absolute; top: 22px; left: 22px; z-index: 2; border: 0; background: transparent; color: #228b4e; font-size: 14px; font-weight: 700; padding: 10px; }
+.welcome-panel { width: 100%; max-width: 620px; padding: 42px 36px; border: 1px solid #d9eadf; border-radius: 24px; background: #fff; box-shadow: 0 20px 60px rgba(31,41,55,.08); text-align: center; }
+.welcome-panel h1 { margin: 18px 0 20px; font-size: clamp(27px, 4vw, 36px); line-height: 1.2; font-weight: 850; letter-spacing: -.035em; color: #1f2937; }
+.welcome-copy { margin: 0 auto 14px; max-width: 500px; color: #526174; font-size: 15px; line-height: 1.8; }
+.welcome-cta { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 14px; padding: 14px 22px; border: 0; border-radius: 12px; background: #228b4e; color: #fff; font-weight: 800; }
+.welcome-cta:hover { background: #197640; }
+.setup-note { margin: 18px 0 0; border-radius: 10px; background: #eaf5ed; padding: 12px; color: #22633b; font-size: 13px; line-height: 1.5; }
+@media (max-width: 640px) {
+  .welcome-shell { padding: 78px 18px 28px; }
+  .landing-heading { margin-top: 34px; }
+  .choice-grid { grid-template-columns: 1fr; gap: 14px; }
+  .choice-card { min-height: 170px; padding: 22px; border-radius: 17px; }
+  .choice-icon { width: 48px; height: 48px; }
+  .choice-arrow { top: 22px; right: 20px; }
+  .welcome-panel { padding: 30px 22px; }
+}
+/* Light green-and-white administration workspace */
+.app-shell { background: #f6faf7; color: #1f2937; }
+.sidebar { background: #fff; border-right-color: #e0e9e2; }
+.brand-accent { color: #228b4e; }
+.tactical-card { background: #fff; border-color: #dfe9e2; box-shadow: 0 4px 16px rgba(31,41,55,.035); }
+.nav-item { color: #526174; }
+.nav-item:hover, .nav-item.active { background: #eaf5ed; color: #228b4e; }
+.primary-button { background: #228b4e; color: #fff; }
+.primary-button:hover { background: #197640; }
+
+
+/* Light-theme dashboard refinements: stronger contrast and softer icon panels */
+.app-shell .text-slate-600 { color: #526174; }
+.app-shell .text-slate-700 { color: #334155; }
+.app-shell .text-slate-800 { color: #1f2937; }
+.app-shell .bg-emerald-50 { background-color: #eaf5ed; }
+.app-shell .border-emerald-100 { border-color: #e2eee5; }
+.app-shell .border-emerald-200 { border-color: #c9e4d1; }
+.app-shell button:disabled { cursor: not-allowed; }
+.app-shell .primary-button:disabled { background: #d7e7dc; color: #526174; }
+
+
+/* =========================================================
+   JCLM unified green theme — shared by every admin module
+   Light mode: botanical green + mint + warm white.
+   Dark mode: charcoal + vivid green accents.
+   ========================================================= */
+:root {
+  --jclm-green: #159957;
+  --jclm-green-deep: #117743;
+  --jclm-green-soft: #dff5e8;
+  --jclm-mint: #effaf3;
+  --jclm-ink: #17251e;
+  --jclm-muted: #52665a;
+  --jclm-border: #d4e8db;
+  --jclm-surface: #ffffff;
+  --jclm-canvas: #f2faf5;
+}
+
+.app-shell {
+  background: var(--jclm-canvas) !important;
+  color: var(--jclm-ink) !important;
+}
+.app-shell .sidebar {
+  background: linear-gradient(180deg, #159957 0%, #117743 100%) !important;
+  border-right: 1px solid #0f6c3d !important;
+  color: #fff !important;
+}
+.app-shell .sidebar h1,
+.app-shell .sidebar p,
+.app-shell .sidebar .brand-accent {
+  color: #fff !important;
+}
+.app-shell .sidebar .text-gray-400,
+.app-shell .sidebar .text-gray-500,
+.app-shell .sidebar .text-slate-600 {
+  color: #d8f5e4 !important;
+}
+.app-shell .sidebar .nav-item {
+  color: #e9fff1 !important;
+  border-radius: 10px;
+}
+.app-shell .sidebar .nav-item:hover,
+.app-shell .sidebar .nav-item.active {
+  background: rgba(255,255,255,.18) !important;
+  color: #fff !important;
+}
+.app-shell .sidebar .nav-item.active {
+  box-shadow: inset 3px 0 0 #b7ff75;
+}
+.app-shell .tactical-card {
+  background: var(--jclm-surface) !important;
+  color: var(--jclm-ink) !important;
+  border-color: var(--jclm-border) !important;
+  box-shadow: 0 5px 18px rgba(20, 83, 45, .045);
+}
+.app-shell .brand-accent { color: var(--jclm-green) !important; }
+.app-shell .primary-button {
+  background: var(--jclm-green) !important;
+  color: #fff !important;
+}
+.app-shell .primary-button:hover { background: var(--jclm-green-deep) !important; }
+.app-shell .text-gray-100,
+.app-shell .text-gray-200,
+.app-shell .text-gray-300 { color: #263b30 !important; }
+.app-shell .text-gray-400,
+.app-shell .text-gray-500 { color: var(--jclm-muted) !important; }
+.app-shell .text-slate-600 { color: #52665a !important; }
+.app-shell .text-slate-700 { color: #35483c !important; }
+.app-shell .text-slate-800 { color: #17251e !important; }
+.app-shell .bg-gray-950,
+.app-shell .bg-gray-900,
+.app-shell .bg-gray-800,
+.app-shell .bg-gray-900\/50,
+.app-shell .bg-gray-900\/70,
+.app-shell .bg-gray-800\/30,
+.app-shell .bg-gray-800\/70 {
+  background-color: #f4fbf6 !important;
+}
+.app-shell .border-gray-800,
+.app-shell .border-gray-700 { border-color: #cfe4d6 !important; }
+.app-shell input:not([type="checkbox"]):not([type="radio"]),
+.app-shell select,
+.app-shell textarea {
+  background-color: #fff !important;
+  color: #17251e !important;
+  border-color: #c6dfce !important;
+}
+.app-shell input::placeholder,
+.app-shell textarea::placeholder { color: #718578 !important; opacity: 1; }
+.app-shell option { background: #fff; color: #17251e; }
+.app-shell button:not(.primary-button):not(.nav-item) {
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.app-shell button:disabled { opacity: .62; }
+.app-shell .bg-emerald-50 { background-color: #e4f7eb !important; }
+.app-shell .border-emerald-100 { border-color: #d7ecdf !important; }
+.app-shell .border-emerald-200 { border-color: #bfe2cc !important; }
+
+/* Respect the device's dark appearance preference throughout all admin modules. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --jclm-green: #12c878;
+    --jclm-green-deep: #00a85f;
+    --jclm-green-soft: #163d2b;
+    --jclm-mint: #10251a;
+    --jclm-ink: #f1f8f3;
+    --jclm-muted: #a9c0b1;
+    --jclm-border: #2c4938;
+    --jclm-surface: #19231d;
+    --jclm-canvas: #101713;
+  }
+  .app-shell { background: var(--jclm-canvas) !important; color: var(--jclm-ink) !important; }
+  .app-shell .sidebar {
+    background: linear-gradient(180deg, #087a46 0%, #075b36 100%) !important;
+    border-right-color: #24543a !important;
+  }
+  .app-shell .tactical-card {
+    background: var(--jclm-surface) !important;
+    color: var(--jclm-ink) !important;
+    border-color: var(--jclm-border) !important;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
+  }
+  .app-shell .brand-accent { color: #35df8d !important; }
+  .app-shell .text-gray-100,
+  .app-shell .text-gray-200,
+  .app-shell .text-gray-300 { color: #e1eee6 !important; }
+  .app-shell .text-gray-400,
+  .app-shell .text-gray-500,
+  .app-shell .text-slate-600 { color: #a9c0b1 !important; }
+  .app-shell .text-slate-700 { color: #c8ddd0 !important; }
+  .app-shell .text-slate-800 { color: #f1f8f3 !important; }
+  .app-shell .bg-gray-950,
+  .app-shell .bg-gray-900,
+  .app-shell .bg-gray-800,
+  .app-shell .bg-gray-900\/50,
+  .app-shell .bg-gray-900\/70,
+  .app-shell .bg-gray-800\/30,
+  .app-shell .bg-gray-800\/70 {
+    background-color: #202e25 !important;
+  }
+  .app-shell .border-gray-800,
+  .app-shell .border-gray-700 { border-color: #385342 !important; }
+  .app-shell input:not([type="checkbox"]):not([type="radio"]),
+  .app-shell select,
+  .app-shell textarea {
+    background-color: #142019 !important;
+    color: #f1f8f3 !important;
+    border-color: #385342 !important;
+  }
+  .app-shell input::placeholder,
+  .app-shell textarea::placeholder { color: #9bb5a4 !important; }
+  .app-shell option { background: #142019; color: #f1f8f3; }
+  .app-shell .bg-emerald-50 { background-color: #163d2b !important; }
+  .app-shell .border-emerald-100 { border-color: #2c4938 !important; }
+  .app-shell .border-emerald-200 { border-color: #3b654b !important; }
+}
+
+/* Final accessibility and consistency pass for every admin module. */
+.app-shell .text-gray-900, .app-shell .text-gray-800, .app-shell .text-gray-700 { color: #17251e !important; }
+.app-shell .bg-white { background-color: #ffffff !important; }
+.app-shell .bg-gray-50, .app-shell .bg-gray-100, .app-shell .bg-gray-200,
+.app-shell .bg-slate-50, .app-shell .bg-slate-100, .app-shell .bg-slate-200 { background-color: #f2faf5 !important; }
+.app-shell .hover\:bg-gray-50:hover, .app-shell .hover\:bg-gray-100:hover,
+.app-shell .hover\:bg-slate-50:hover { background-color: #e3f4e9 !important; }
+.app-shell .bg-emerald-500, .app-shell .bg-green-500, .app-shell .bg-lime-300 { background-color: #159957 !important; }
+.app-shell .text-emerald-600, .app-shell .text-green-600, .app-shell .text-lime-600 { color: #117743 !important; }
+.app-shell .ring-emerald-500 { --tw-ring-color: #159957 !important; }
+.app-shell .border-gray-200, .app-shell .border-gray-300, .app-shell .border-slate-200, .app-shell .border-slate-300 { border-color: #d4e8db !important; }
+.app-shell .rounded-xl, .app-shell .rounded-2xl { box-shadow: none; }
+.app-shell table th { color: #35483c !important; background-color: #effaf3 !important; }
+.app-shell table td { color: #263b30; }
+.app-shell .sidebar .bg-lime-300 { background-color: #b7ff75 !important; color: #103b25 !important; }
+.app-shell .sidebar .nav-item:focus-visible { outline: 2px solid #b7ff75; outline-offset: 2px; }
+@media (prefers-color-scheme: dark) {
+  .app-shell .text-gray-900, .app-shell .text-gray-800, .app-shell .text-gray-700 { color: #e4f2e9 !important; }
+  .app-shell .bg-white, .app-shell .bg-gray-50, .app-shell .bg-gray-100, .app-shell .bg-gray-200,
+  .app-shell .bg-slate-50, .app-shell .bg-slate-100, .app-shell .bg-slate-200 { background-color: #19231d !important; }
+  .app-shell .hover\:bg-gray-50:hover, .app-shell .hover\:bg-gray-100:hover,
+  .app-shell .hover\:bg-slate-50:hover { background-color: #24382b !important; }
+  .app-shell .text-emerald-600, .app-shell .text-green-600, .app-shell .text-lime-600 { color: #35df8d !important; }
+  .app-shell .border-gray-200, .app-shell .border-gray-300, .app-shell .border-slate-200, .app-shell .border-slate-300 { border-color: #2c4938 !important; }
+  .app-shell table th { color: #e1eee6 !important; background-color: #202e25 !important; }
+  .app-shell table td { color: #e1eee6 !important; }
+}
+
+
+/* Public member QR check-in */
+.member-checkin-panel { text-align: left; }
+.member-checkin-panel .welcome-mark,
+.member-checkin-panel > .eyebrow,
+.member-checkin-panel > h1,
+.member-checkin-panel > .welcome-copy { text-align: center; }
+.member-search-label { display: block; margin: 22px 0 8px; color: #263b30; font-size: 14px; font-weight: 750; }
+.member-search-input {
+  display: block; width: 100%; box-sizing: border-box; border: 1px solid #c6dfce;
+  border-radius: 12px; background: #fff; color: #17251e; padding: 14px 15px;
+  font: inherit; outline: none; box-shadow: 0 2px 6px rgba(20,83,45,.04);
+}
+.member-search-input:focus { border-color: #159957; box-shadow: 0 0 0 3px rgba(21,153,87,.14); }
+.member-search-input::placeholder { color: #718578; }
+.member-helper { margin: 10px 0; color: #52665a; font-size: 13px; line-height: 1.5; }
+.member-result-list { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+.member-result-option {
+  display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 13px 14px; border: 1px solid #d4e8db; border-radius: 10px;
+  background: #f2faf5; color: #17251e; text-align: left; font-weight: 650; cursor: pointer;
+}
+.member-result-option:hover { background: #e3f4e9; border-color: #159957; }
+.selected-member-card { margin-top: 16px; padding: 16px; border: 1px solid #bfe2cc; border-radius: 14px; background: #f2faf5; color: #17251e; }
+.selected-member-card strong { display: block; font-size: 18px; }
+.member-submit { display: flex; width: 100%; margin-top: 16px; }
+.member-change-button { display: block; margin: 12px auto 0; padding: 8px; border: 0; background: transparent; color: #117743; font-size: 13px; font-weight: 700; cursor: pointer; }
+.member-privacy-note { margin: 22px 0 0; color: #718578; font-size: 12px; line-height: 1.6; text-align: center; }
+.member-success { margin-top: 22px; text-align: center; }
+.member-success-icon { display: inline-flex; align-items: center; justify-content: center; width: 52px; height: 52px; border-radius: 50%; background: #dff5e8; color: #117743; font-size: 30px; font-weight: 800; }
+.member-success h2 { margin: 14px 0 8px; color: #17251e; font-size: 24px; font-weight: 800; }
+.member-success p { color: #52665a; line-height: 1.7; }
+@media (prefers-color-scheme: dark) {
+  .member-search-label { color: #e1eee6; }
+  .member-search-input { background: #142019; color: #f1f8f3; border-color: #385342; }
+  .member-search-input::placeholder { color: #9bb5a4; }
+  .member-helper, .member-privacy-note { color: #a9c0b1; }
+  .member-result-option, .selected-member-card { background: #192d21; color: #f1f8f3; border-color: #385342; }
+  .member-result-option:hover { background: #243f2e; }
+  .member-success h2 { color: #f1f8f3; }
+  .member-success p { color: #a9c0b1; }
+  .member-change-button { color: #35df8d; }
+}
+
+
+/* Public QR check-in intentionally stays in the approved light theme,
+   regardless of the device's admin-workspace dark-mode preference. */
+.welcome-shell .member-checkin-panel .member-search-label {
+  color: #263b30 !important;
+}
+.welcome-shell .member-checkin-panel .member-search-input {
+  background: #ffffff !important;
+  color: #17251e !important;
+  border-color: #c6dfce !important;
+}
+.welcome-shell .member-checkin-panel .member-search-input::placeholder {
+  color: #718578 !important;
+  opacity: 1;
+}
+.welcome-shell .member-checkin-panel .member-helper,
+.welcome-shell .member-checkin-panel .member-privacy-note {
+  color: #52665a !important;
+}
+.welcome-shell .member-checkin-panel .member-result-option {
+  background: #f2faf5 !important;
+  color: #17251e !important;
+  border-color: #d4e8db !important;
+}
+.welcome-shell .member-checkin-panel .selected-member-card {
+  background: #eaf5ed !important;
+  color: #17251e !important;
+  border-color: #c7e6d0 !important;
+}
+.welcome-shell .member-checkin-panel .selected-member-card .member-helper {
+  color: #52665a !important;
+}
+.welcome-shell .member-checkin-panel .member-change-button {
+  color: #117743 !important;
+}
+.welcome-shell .member-checkin-panel .member-success h2 {
+  color: #17251e !important;
+}
+.welcome-shell .member-checkin-panel .member-success p {
+  color: #52665a !important;
+}
+
+
+/* Public first-timer registration form */
+.first-timer-form { margin-top: 22px; text-align: left; }
+.first-timer-form .member-search-label { margin-top: 16px; }
+.first-timer-form .member-search-label span[aria-hidden="true"] { color: #b42318; }
+.first-timer-form .optional-label { color: #526174; font-size: 12px; font-weight: 500; }
+.first-timer-form .member-search-input { margin-top: 0; }
+.first-timer-submit { width: 100%; margin-top: 22px; }
+.first-timer-submit:disabled { cursor: not-allowed; opacity: .55; }
+.first-timer-panel { max-width: 680px; }
+@media (prefers-color-scheme: dark) {
+  .first-timer-form .optional-label { color: #a9c0b1; }
+}
+
+.inviter-type-label { display: block; margin-top: 3px; color: #52665a; font-size: 11px; font-weight: 500; }
+@media (prefers-color-scheme: dark) {
+  .inviter-type-label { color: #a9c0b1; }
+}
+
+
+/* Public QR screens stay in the approved light palette regardless of device theme.
+   This prevents dark-mode admin styles from making public form text too pale. */
+.welcome-shell,
+.welcome-shell .welcome-panel,
+.welcome-shell .first-timer-panel,
+.welcome-shell .member-checkin-panel {
+  background-color: #ffffff !important;
+  color: #1f2937 !important;
+}
+.welcome-shell .welcome-panel h1,
+.welcome-shell .welcome-panel h2,
+.welcome-shell .member-success h2 {
+  color: #1f2937 !important;
+}
+.welcome-shell .welcome-copy,
+.welcome-shell .member-success p {
+  color: #526174 !important;
+}
+.welcome-shell .member-search-label {
+  color: #263b30 !important;
+}
+.welcome-shell .member-search-label span[aria-hidden="true"] {
+  color: #b42318 !important;
+}
+.welcome-shell .optional-label {
+  color: #526174 !important;
+  font-weight: 500;
+}
+.welcome-shell .member-search-input,
+.welcome-shell input.member-search-input,
+.welcome-shell textarea.member-search-input,
+.welcome-shell select.member-search-input {
+  background-color: #ffffff !important;
+  color: #17251e !important;
+  border: 1px solid #c6dfce !important;
+}
+.welcome-shell .member-search-input::placeholder {
+  color: #718578 !important;
+  opacity: 1 !important;
+}
+.welcome-shell .member-search-input:focus {
+  border-color: #159957 !important;
+  box-shadow: 0 0 0 3px rgba(21,153,87,.14) !important;
+}
+.welcome-shell .member-helper,
+.welcome-shell .member-privacy-note {
+  color: #52665a !important;
+}
+.welcome-shell .member-result-option {
+  background-color: #f2faf5 !important;
+  color: #17251e !important;
+  border-color: #d4e8db !important;
+}
+.welcome-shell .member-result-option:hover {
+  background-color: #e3f4e9 !important;
+}
+.welcome-shell .selected-member-card {
+  background-color: #eaf5ed !important;
+  color: #17251e !important;
+  border-color: #c7e6d0 !important;
+}
+.welcome-shell .selected-member-card .member-helper {
+  color: #52665a !important;
+}
+.welcome-shell .member-success-icon {
+  background-color: #dff5e8 !important;
+  color: #117743 !important;
+}
+.welcome-shell .welcome-cta {
+  background-color: #228b4e !important;
+  color: #ffffff !important;
+}
+.welcome-shell .welcome-cta:hover {
+  background-color: #197640 !important;
+}
+.welcome-shell .back-link {
+  color: #117743 !important;
+}
+.welcome-shell .setup-note {
+  background-color: #eaf5ed !important;
+  color: #22633b !important;
+  border: 1px solid #c7e6d0;
+}
+.first-timer-form {
+  text-align: left;
+}
+.first-timer-form .member-search-label:not(:first-child) {
+  margin-top: 18px;
+}
+.first-timer-submit:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+}
+
+/* Global theme tokens and light mode overrides. Dark mode retains the original charcoal/green palette. */
+.app-shell[data-theme="light"] {
+  background: #f4f8f4;
+  color: #1c2b20;
+}
+.app-shell[data-theme="light"] .sidebar {
+  background: #ffffff;
+  border-right-color: #dce8dd;
+}
+.app-shell[data-theme="light"] header {
+  background: rgba(255,255,255,.94);
+  border-bottom-color: #dce8dd;
+}
+.app-shell[data-theme="light"] .tactical-card {
+  background: #ffffff;
+  border-color: #dce8dd;
+  box-shadow: 0 2px 8px rgba(25, 65, 35, .035);
+}
+.app-shell[data-theme="light"] .nav-item { color: #526457; }
+.app-shell[data-theme="light"] .nav-item:hover,
+.app-shell[data-theme="light"] .nav-item.active { background: #e8f5e9; color: #16743b; }
+.app-shell[data-theme="light"] .brand-accent { color: #198044; }
+.app-shell[data-theme="light"] .theme-toggle { border-color: #cbdccf; color: #31533b; background: #f8fbf8; }
+.app-shell[data-theme="light"] .theme-toggle:hover { background: #eaf5eb; }
+.app-shell[data-theme="light"] .text-gray-100,
+.app-shell[data-theme="light"] .text-gray-200,
+.app-shell[data-theme="light"] .text-gray-300,
+.app-shell[data-theme="light"] .text-gray-400,
+.app-shell[data-theme="light"] .text-slate-800,
+.app-shell[data-theme="light"] .text-slate-700 { color: #263b2c !important; }
+.app-shell[data-theme="light"] .text-gray-500,
+.app-shell[data-theme="light"] .text-slate-600,
+.app-shell[data-theme="light"] .text-slate-500 { color: #65776a !important; }
+.app-shell[data-theme="light"] .border-gray-700,
+.app-shell[data-theme="light"] .border-gray-800,
+.app-shell[data-theme="light"] .divide-gray-800 > :not([hidden]) ~ :not([hidden]) { border-color: #dce8dd !important; }
+.app-shell[data-theme="light"] .bg-gray-900,
+.app-shell[data-theme="light"] .bg-gray-950,
+.app-shell[data-theme="light"] .bg-gray-800,
+.app-shell[data-theme="light"] .bg-gray-800\/70 { background-color: #f7faf7 !important; }
+.app-shell[data-theme="light"] .hover\:bg-gray-800:hover,
+.app-shell[data-theme="light"] .hover\:bg-gray-800\/30:hover { background-color: #edf5ee !important; }
+.app-shell[data-theme="light"] input,
+.app-shell[data-theme="light"] select,
+.app-shell[data-theme="light"] textarea { color: #203527; border-color: #cbdccf; background-color: #fff; }
+.app-shell[data-theme="light"] table thead { background-color: #eef5ef; }
+.app-shell[data-theme="light"] .primary-button { background: #198044; color: #fff; }
+.app-shell[data-theme="light"] .primary-button:hover { background: #126b37; }
+.app-shell[data-theme="light"] .nav-item.active { font-weight: 650; }
+.app-shell[data-theme="light"] .bg-lime-300 { background-color: #198044; color: white; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+/* QR attendance management page */
+.secondary-button {
+  border: 1px solid #405040;
+  background: #2a332a;
+  color: #e5eee3;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: .875rem;
+  font-weight: 600;
+  transition: background 150ms ease, border-color 150ms ease;
+}
+.secondary-button:hover { background: #354335; }
+.secondary-button:disabled { opacity: .5; cursor: not-allowed; }
+.form-control {
+  border: 1px solid #405040;
+  border-radius: 8px;
+  background: #171f17;
+  color: #f4f7f2;
+  padding: 12px;
+  min-height: 46px;
+}
+.app-shell[data-theme="light"] .secondary-button {
+  border-color: #cbdccf;
+  background: #f8fbf8;
+  color: #31533b;
+}
+.app-shell[data-theme="light"] .secondary-button:hover { background: #eaf5eb; }
+.app-shell[data-theme="light"] .form-control { background: #fff; color: #203527; border-color: #cbdccf; }
+@media print {
+  body { background: #fff !important; }
+  .sidebar, header, nav, .secondary-button, .primary-button, .print-qr-card ~ * { display: none !important; }
+  .app-shell, .app-shell[data-theme="light"] { background: #fff !important; color: #111 !important; }
+  .tactical-card, .print-qr-card { background: #fff !important; border: 0 !important; box-shadow: none !important; }
+  .print-qr-card { break-inside: avoid; }
+  .print-qr-card img { max-width: 420px !important; }
+  .print-qr-card p { color: #111 !important; }
+}
+
+/* Consistent global light/dark themes */
+.app-shell[data-theme="light"] { background:#f8faf8; color:#202a38; }
+.app-shell[data-theme="light"] .sidebar { background:#087849; border-color:#d5e8da; }
+.app-shell[data-theme="light"] .sidebar .brand-accent { color:#ffffff; }
+.app-shell[data-theme="light"] .sidebar .text-gray-400,
+.app-shell[data-theme="light"] .sidebar .text-gray-500 { color:#c7e2d3; }
+.app-shell[data-theme="light"] .nav-item { color:#eefaf2; }
+.app-shell[data-theme="light"] .nav-item:hover,
+.app-shell[data-theme="light"] .nav-item.active { background:#278e62; color:#ffffff; }
+.app-shell[data-theme="light"] .tactical-card { background:#ffffff; border-color:#dce8df; box-shadow:0 2px 8px rgba(16,60,35,.035); }
+.app-shell[data-theme="light"] .brand-accent { color:#16834c; }
+.app-shell[data-theme="light"] header { background:#ffffff; border-color:#e1e8e3; }
+.app-shell[data-theme="light"] header .text-gray-400,
+.app-shell[data-theme="light"] header .text-gray-500 { color:#617064; }
+.app-shell[data-theme="light"] .form-control { background:#fff; color:#202a38; border-color:#cbd9ce; }
+.app-shell[data-theme="light"] .secondary-button { color:#22543a; border-color:#c9ddcf; background:#fff; }
+.app-shell[data-theme="light"] .status-screen { background:#f8faf8; color:#202a38; }
+.app-shell[data-theme="light"] .status-screen section { background:#fff; border-color:#dce8df; }
+.app-shell[data-theme="light"] .status-screen .text-gray-400 { color:#607064; }
+.app-shell[data-theme="dark"] { background:#101810; color:#f4f7f2; }
+.login-shell { min-height:100vh; transition:background .2s,color .2s; }
+.login-light { background:#fff; color:#202a38; }
+.login-dark { background:#101810; color:#f4f7f2; }
+.login-card { border:1px solid #dce8df; background:#fff; box-shadow:0 20px 50px rgba(20,45,30,.12); }
+.login-dark .login-card { background:#222a22; border-color:#354035; box-shadow:0 24px 55px rgba(0,0,0,.28); }
+.login-accent,.login-submit { background:#208b50; }
+.login-accent { background:#208b50; }
+.login-dark .login-accent,.login-dark .login-submit { background:#a0f66a; }
+.login-mark { background:#e9f5ed; color:#208b50; }
+.login-dark .login-mark { background:#1d231d; border:1px solid #354035; color:#a0f66a; }
+.login-eyebrow { color:#208b50; }
+.login-dark .login-eyebrow { color:#a0f66a; }
+.login-title,.login-label { color:#202a38; }
+.login-dark .login-title,.login-dark .login-label { color:#f4f7f2; }
+.login-copy,.login-footer { color:#64748b; }
+.login-dark .login-copy { color:#b8c2b6; }
+.login-dark .login-footer { color:#8f9b8d; }
+.login-input { border:1px solid #cbd5cf; background:#fff; color:#202a38; }
+.login-input:focus { border-color:#208b50; box-shadow:0 0 0 2px #208b5020; }
+.login-dark .login-input { border-color:#354035; background:#171c17; color:#f4f7f2; }
+.login-dark .login-input:focus { border-color:#a0f66a; box-shadow:0 0 0 2px #a0f66a20; }
+.login-eye { color:#64748b; }
+.login-dark .login-eye { color:#b8c2b6; }
+.login-submit { color:#fff; }
+.login-submit:hover { background:#167543; }
+.login-dark .login-submit { color:#172116; }
+.login-dark .login-submit:hover { background:#b5ff89; }
+.login-theme-toggle { border-color:#cbdccf; color:#31533b; background:#f8fbf8; }
+.login-theme-toggle:hover { background:#eaf5eb; }
+.login-dark .login-theme-toggle { border-color:#465345; color:#dce8d9; background:#1d231d; }
+.app-shell[data-theme="light"] { --graph-grid:#dce8df; --graph-text:#718078; --graph-line:#16834c; --graph-point:#ffffff; --graph-empty-bg:rgba(255,255,255,.92); }
+.app-shell[data-theme="dark"] { --graph-grid:#354035; --graph-text:#a0afa0; --graph-line:#a0f66a; --graph-point:#172117; --graph-empty-bg:rgba(34,42,34,.94); }
+
+
+/* GLOBAL LIGHT MODE OVERRIDE — applies to every module, modal, form and table.
+   The earlier theme only styled the shell/header; module components still carry
+   dark Tailwind utility classes. These selectors intentionally override those. */
+.app-shell[data-theme="light"] {
+  --jclm-canvas: #f7faf8;
+  --jclm-surface: #ffffff;
+  --jclm-ink: #202a38;
+  --jclm-muted: #64748b;
+  --jclm-border: #dce8df;
+  background: #f7faf8 !important;
+  color: #202a38 !important;
+  color-scheme: light;
+}
+.app-shell[data-theme="light"] main,
+.app-shell[data-theme="light"] main > div,
+.app-shell[data-theme="light"] main section {
+  color: #202a38;
+}
+.app-shell[data-theme="light"] [class~="bg-gray-950"],
+.app-shell[data-theme="light"] [class~="bg-gray-900"],
+.app-shell[data-theme="light"] [class~="bg-gray-800"],
+.app-shell[data-theme="light"] [class~="bg-gray-800/70"],
+.app-shell[data-theme="light"] [class~="bg-gray-900/50"],
+.app-shell[data-theme="light"] [class~="bg-gray-900/70"],
+.app-shell[data-theme="light"] [class~="bg-gray-800/50"] {
+  background-color: #ffffff !important;
+}
+.app-shell[data-theme="light"] [class~="text-white"],
+.app-shell[data-theme="light"] [class~="text-gray-100"],
+.app-shell[data-theme="light"] [class~="text-gray-200"],
+.app-shell[data-theme="light"] [class~="text-gray-300"] {
+  color: #24332a !important;
+}
+.app-shell[data-theme="light"] [class~="text-gray-400"],
+.app-shell[data-theme="light"] [class~="text-gray-500"] {
+  color: #647568 !important;
+}
+.app-shell[data-theme="light"] [class~="border-gray-700"],
+.app-shell[data-theme="light"] [class~="border-gray-800"],
+.app-shell[data-theme="light"] [class~="border-gray-600"] {
+  border-color: #dce8df !important;
+}
+.app-shell[data-theme="light"] [class~="hover:bg-gray-800"]:hover,
+.app-shell[data-theme="light"] [class~="hover:bg-gray-800/30"]:hover {
+  background-color: #edf5ef !important;
+}
+.app-shell[data-theme="light"] [class~="bg-lime-950/20"],
+.app-shell[data-theme="light"] [class~="bg-lime-950/30"],
+.app-shell[data-theme="light"] [class~="bg-lime-950/40"] {
+  background-color: #eaf6ed !important;
+}
+.app-shell[data-theme="light"] [class~="text-lime-300"] { color: #187844 !important; }
+.app-shell[data-theme="light"] [class~="border-lime-800/60"] { border-color: #c6e2ce !important; }
+.app-shell[data-theme="light"] [class~="bg-emerald-950/30"],
+.app-shell[data-theme="light"] [class~="bg-emerald-950/40"] { background-color: #e7f5eb !important; }
+.app-shell[data-theme="light"] [class~="text-emerald-300"] { color: #187844 !important; }
+.app-shell[data-theme="light"] [class~="border-emerald-800/60"] { border-color: #c6e2ce !important; }
+.app-shell[data-theme="light"] [class~="bg-red-950/30"],
+.app-shell[data-theme="light"] [class~="bg-red-950/40"] { background-color: #fff0ef !important; }
+.app-shell[data-theme="light"] [class~="text-red-300"] { color: #a52c2c !important; }
+.app-shell[data-theme="light"] [class~="border-red-900"] { border-color: #f0c9c6 !important; }
+.app-shell[data-theme="light"] [class~="bg-amber-950/40"] { background-color: #fff5df !important; }
+.app-shell[data-theme="light"] [class~="text-amber-300"] { color: #8a5a00 !important; }
+.app-shell[data-theme="light"] input,
+.app-shell[data-theme="light"] select,
+.app-shell[data-theme="light"] textarea {
+  background-color: #ffffff !important;
+  color: #202a38 !important;
+  border-color: #cbd9ce !important;
+  color-scheme: light;
+}
+.app-shell[data-theme="light"] table thead,
+.app-shell[data-theme="light"] [class~="bg-gray-800/70"] { background-color: #eef5ef !important; }
+.app-shell[data-theme="light"] .tactical-card { background: #ffffff !important; color: #202a38 !important; border-color: #dce8df !important; }
+.app-shell[data-theme="light"] .sidebar { background: linear-gradient(180deg,#087849 0%,#07663e 100%) !important; color: #fff !important; }
+.app-shell[data-theme="light"] .sidebar [class~="text-white"],
+.app-shell[data-theme="light"] .sidebar [class~="text-gray-100"],
+.app-shell[data-theme="light"] .sidebar [class~="text-gray-200"],
+.app-shell[data-theme="light"] .sidebar [class~="text-gray-300"] { color: #fff !important; }
+.app-shell[data-theme="light"] .sidebar [class~="text-gray-400"],
+.app-shell[data-theme="light"] .sidebar [class~="text-gray-500"] { color: #d5eee0 !important; }
+.app-shell[data-theme="light"] .sidebar .nav-item { color: #f0fff5 !important; }
+.app-shell[data-theme="light"] .sidebar .nav-item.active { background: rgba(255,255,255,.18) !important; color: #fff !important; }
+.app-shell[data-theme="light"] header { background: #fff !important; color: #202a38 !important; border-color: #e1e8e3 !important; }
+.app-shell[data-theme="light"] header [class~="text-white"],
+.app-shell[data-theme="light"] header [class~="text-gray-100"],
+.app-shell[data-theme="light"] header [class~="text-gray-200"] { color: #202a38 !important; }
+
+/* Dashboard stat cards: use the strong green treatment from the welcome choice card. */
+.app-shell .attendance-stat-card {
+  background: #208b50 !important;
+  color: #ffffff !important;
+  border: 1px solid #208b50 !important;
+  border-radius: 22px !important;
+  box-shadow: 0 8px 22px rgba(20, 100, 55, .10) !important;
+  min-height: 150px;
+  transition: transform .16s ease, box-shadow .16s ease;
+}
+.app-shell .attendance-stat-card:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(20,100,55,.16) !important; }
+.app-shell .attendance-stat-card .attendance-stat-label,
+.app-shell .attendance-stat-card .attendance-stat-desc { color: rgba(255,255,255,.84) !important; }
+.app-shell .attendance-stat-card .attendance-stat-icon {
+  background: rgba(255,255,255,.17) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255,255,255,.10) !important;
+}
+.app-shell[data-theme="dark"] .attendance-stat-card { background:#1e874e !important; border-color:#2c9a60 !important; }
+
+/* Keep the navigation fixed; only the workspace content scrolls. */
+html, body, #root { min-height: 100%; }
+.app-shell { height: 100dvh; min-height: 0 !important; overflow: hidden; }
+.app-shell > div { height: 100%; min-height: 0; overflow: hidden; }
+.app-shell .sidebar { height: 100%; max-height: 100%; overflow: hidden !important; flex: 0 0 17rem; }
+.app-shell > div > main,
+.app-shell main.min-w-0 { height: 100%; min-height: 0; overflow-y: auto; overflow-x: hidden; overscroll-behavior: contain; }
+.app-shell main.min-w-0 > header { position: sticky; top: 0; z-index: 30; }
+@media (max-width: 767px) {
+  .app-shell { height: 100dvh; }
+  .app-shell > div > main,
+  .app-shell main.min-w-0 { width: 100%; }
+}
+
+
+/* Final theme alignment based on the supplied references.
+   Light stat cards match the pale Log Attendance choice card.
+   Dark login uses the same charcoal / green-gray / lime palette as the admin workspace. */
+.app-shell[data-theme="light"] .attendance-stat-card {
+  background: #f7fcf8 !important;
+  color: #202a38 !important;
+  border: 2px solid #c8e8d2 !important;
+  border-radius: 22px !important;
+  box-shadow: none !important;
+}
+.app-shell[data-theme="light"] .attendance-stat-card .attendance-stat-label,
+.app-shell[data-theme="light"] .attendance-stat-card .attendance-stat-desc {
+  color: #526174 !important;
+}
+.app-shell[data-theme="light"] .attendance-stat-card .attendance-stat-icon {
+  background: #e7f4eb !important;
+  color: #208b50 !important;
+  border: 0 !important;
+}
+.app-shell[data-theme="dark"] .attendance-stat-card {
+  background: #18251d !important;
+  color: #f4f7f2 !important;
+  border: 1px solid #2c4937 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+}
+.app-shell[data-theme="dark"] .attendance-stat-card .attendance-stat-label,
+.app-shell[data-theme="dark"] .attendance-stat-card .attendance-stat-desc {
+  color: #a9b9ad !important;
+}
+.app-shell[data-theme="dark"] .attendance-stat-card .attendance-stat-icon {
+  background: #17412e !important;
+  color: #00b889 !important;
+  border: 1px solid #2e6248 !important;
+}
+
+/* The login's dark palette intentionally matches the main dashboard reference. */
+.login-dark {
+  background: #101810 !important;
+  color: #f4f7f2 !important;
+}
+.login-dark .login-card {
+  background: #222a22 !important;
+  border-color: #354035 !important;
+  box-shadow: 0 24px 55px rgba(0,0,0,.28) !important;
+}
+.login-dark .login-accent,
+.login-dark .login-submit {
+  background: #a0f66a !important;
+}
+.login-dark .login-mark {
+  background: #1d231d !important;
+  border-color: #354035 !important;
+  color: #a0f66a !important;
+}
+.login-dark .login-eyebrow { color: #a0f66a !important; }
+.login-dark .login-title,
+.login-dark .login-label { color: #f4f7f2 !important; }
+.login-dark .login-copy { color: #b8c2b6 !important; }
+.login-dark .login-footer { color: #8f9b8d !important; }
+.login-dark .login-input {
+  background: #171c17 !important;
+  border-color: #354035 !important;
+  color: #f4f7f2 !important;
+}
+.login-dark .login-eye { color: #b8c2b6 !important; }
+.login-dark .login-theme-toggle {
+  background: #1d231d !important;
+  border-color: #465345 !important;
+  color: #dce8d9 !important;
+}
+.login-dark .login-submit { color: #172116 !important; }
+.login-dark .login-submit:hover { background: #b5ff89 !important; }
+
+
+/* Final fixes for the three reported theme/scroll issues. */
+.app-shell[data-theme="dark"] main.min-w-0 > header {
+  background: #101810 !important;
+  color: #f4f7f2 !important;
+  border-bottom: 1px solid #2c4937 !important;
+  opacity: 1 !important;
+  isolation: isolate;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+.app-shell[data-theme="dark"] main.min-w-0 > header > div {
+  background-color: transparent;
+}
+.app-shell[data-theme="light"] main.min-w-0 > header {
+  background: #ffffff !important;
+  color: #202a38 !important;
+  border-bottom: 1px solid #dce8df !important;
+  opacity: 1 !important;
+  isolation: isolate;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+/* The QR itself must always sit on a pure white surface for reliable scanning,
+   regardless of the currently selected application theme. */
+.app-shell .qr-print-frame {
+  background: #ffffff !important;
+  color: #202a38 !important;
+  border: 1px solid #e1e8e3 !important;
+  box-shadow: none !important;
+}
+.app-shell .qr-print-frame img {
+  display: block;
+  background: #ffffff !important;
+  object-fit: contain;
+}
+.app-shell .qr-print-frame p { color: #202a38 !important; }
+.app-shell .qr-print-frame p:last-child { color: #526174 !important; }
+@media print {
+  .app-shell .qr-print-frame { background: #ffffff !important; border: 0 !important; }
+}
+
+/* FINAL LOGIN PALETTE MATCH: use the same forest/emerald palette as the dark dashboard. */
+.login-dark {
+  background: #0f1812 !important;
+  color: #eef5ef !important;
+}
+.login-dark .login-card {
+  background: #18251d !important;
+  border: 1px solid #2b4a37 !important;
+  box-shadow: 0 24px 55px rgba(0,0,0,.30) !important;
+}
+.login-dark .login-accent {
+  background: #00e58a !important;
+}
+.login-dark .login-mark {
+  background: #173b2b !important;
+  border-color: #2b5940 !important;
+  color: #00e58a !important;
+}
+.login-dark .login-eyebrow { color: #00e58a !important; }
+.login-dark .login-title,
+.login-dark .login-label { color: #eef5ef !important; }
+.login-dark .login-copy { color: #a8b9ad !important; }
+.login-dark .login-footer { color: #819487 !important; }
+.login-dark .login-input {
+  background: #111b14 !important;
+  border: 1px solid #2b4a37 !important;
+  color: #eef5ef !important;
+}
+.login-dark .login-input:focus {
+  border-color: #00b978 !important;
+  box-shadow: 0 0 0 2px rgba(0,229,138,.13) !important;
+}
+.login-dark .login-eye { color: #a8b9ad !important; }
+.login-dark .login-theme-toggle {
+  background: #17231b !important;
+  border-color: #34513e !important;
+  color: #dce8df !important;
+}
+.login-dark .login-submit {
+  background: #00d982 !important;
+  color: #092116 !important;
+}
+.login-dark .login-submit:hover { background: #00e58a !important; }
+
+/* HARVEST OPS event identity: keep the transparent square logo responsive. */
+.harvest-logo-wrap { display:flex; justify-content:center; align-items:center; width:100%; margin:0 auto 16px; }
+.harvest-event-logo { display:block; width:clamp(120px, 26vw, 190px); height:clamp(120px, 26vw, 190px); max-width:100%; object-fit:contain; object-position:center; }
+.landing-logo-wrap { margin-bottom:12px; }
+.landing-logo-wrap .harvest-event-logo { width:clamp(110px, 20vw, 170px); height:clamp(110px, 20vw, 170px); }
+.harvest-logo-wrap { position:relative; }
+.harvest-logo-fallback { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; color:#228b4e; pointer-events:none; }
+.harvest-logo-fallback svg + svg { position:absolute; color:#f3c969; }
+.harvest-event-logo { position:relative; z-index:1; }
+
+
+/* Attendance search field: reserve room for the icon and avoid icon/caret overlap. */
+.attendance-search-wrap { position: relative; min-width: 0; }
+.attendance-search-icon { pointer-events: none; z-index: 1; }
+.attendance-search-input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 12px 14px 12px 42px !important;
+  line-height: 1.4;
+  text-indent: 0;
+}
+.form-control[type="file"] { height: auto; padding: 10px 12px; }
+.import-stat { display:flex; flex-direction:column; gap:6px; padding:14px; border:1px solid var(--jclm-border, #d4e8db); border-radius:10px; background:var(--jclm-surface, #fff); }
+.import-stat span { font-size:12px; color:var(--jclm-muted, #52665a); }
+.import-stat strong { font-size:24px; line-height:1.2; }
+.import-status { display:inline-block; border-radius:999px; padding:4px 8px; font-size:11px; font-weight:700; white-space:nowrap; }
+.import-add { background:#e4f7eb; color:#116a3b; }
+.import-warning { background:#fff3cd; color:#855b00; }
+.import-danger { background:#fee2e2; color:#991b1b; }
+.app-shell[data-theme="dark"] .import-stat { background:#19231d; border-color:#2c4938; }
+.app-shell[data-theme="dark"] .import-add { background:#163d2b; color:#7be6a9; }
+.app-shell[data-theme="dark"] .import-warning { background:#49391a; color:#ffdc82; }
+.app-shell[data-theme="dark"] .import-danger { background:#4b2020; color:#ffb4b4; }
+
+
+/* HARVEST OPS FIX: readable attendance tables and search fields in Light mode. */
+.app-shell[data-theme="light"] .tactical-card,
+.app-shell[data-theme="light"] .tactical-card table,
+.app-shell[data-theme="light"] .tactical-card tbody,
+.app-shell[data-theme="light"] .tactical-card tr {
+  color: #1f2937 !important;
+}
+.app-shell[data-theme="light"] .tactical-card table thead tr {
+  background: #eaf5ed !important;
+  color: #1f3b2b !important;
+}
+.app-shell[data-theme="light"] .tactical-card table th {
+  background: #eaf5ed !important;
+  color: #1f3b2b !important;
+  border-color: #d4e8db !important;
+}
+.app-shell[data-theme="light"] .tactical-card table td {
+  background: #ffffff !important;
+  color: #263b30 !important;
+  border-color: #d4e8db !important;
+}
+.app-shell[data-theme="light"] .tactical-card table tr:hover td {
+  background: #f5fbf7 !important;
+}
+.app-shell[data-theme="light"] .attendance-search-input,
+.app-shell[data-theme="light"] input.attendance-search-input,
+.app-shell[data-theme="light"] .form-control:not([type="file"]) {
+  background: #ffffff !important;
+  color: #17251e !important;
+  border: 1px solid #bfd8c7 !important;
+}
+.app-shell[data-theme="light"] .attendance-search-input::placeholder,
+.app-shell[data-theme="light"] .form-control::placeholder {
+  color: #687c70 !important;
+  opacity: 1 !important;
+}
+.app-shell[data-theme="light"] .attendance-search-icon {
+  color: #52665a !important;
+}
+.app-shell[data-theme="light"] .tactical-card .text-slate-500,
+.app-shell[data-theme="light"] .tactical-card .text-slate-400,
+.app-shell[data-theme="light"] .tactical-card .text-gray-400 {
+  color: #52665a !important;
+}
+
+
+/* Harvest OPS shared church branding and admin first-timer form */
+.first-timer-admin-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, .85fr) minmax(0, 1.15fr);
+  gap: 1rem;
+  align-items: start;
+}
+.first-timer-admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.first-timer-admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--jclm-ink, #17251e);
+  font-size: 13px;
+  font-weight: 700;
+}
+.first-timer-admin-form label span { color: #c62828; }
+.first-timer-admin-form label small {
+  display: inline;
+  color: var(--jclm-muted, #52665a);
+  font-size: 11px;
+  font-weight: 500;
+}
+.first-timer-admin-form .form-control {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background: var(--jclm-surface, #fff) !important;
+  color: var(--jclm-ink, #17251e) !important;
+  border: 1px solid var(--jclm-border, #d4e8db) !important;
+  border-radius: 10px;
+  padding: 11px 12px;
+  outline: none;
+}
+.first-timer-admin-form .form-control:focus {
+  border-color: var(--jclm-green, #159957) !important;
+  box-shadow: 0 0 0 3px rgba(21,153,87,.15);
+}
+.first-timer-admin-form .primary-button { min-height: 44px; margin-top: 4px; }
+.first-timers-page table { border-collapse: collapse; }
+.first-timers-page table thead { background: var(--jclm-mint, #effaf3); }
+.first-timers-page table th { color: var(--jclm-ink, #17251e) !important; font-weight: 700; }
+.first-timers-page table td { color: var(--jclm-ink, #17251e) !important; }
+.first-timers-page table tr { border-color: var(--jclm-border, #d4e8db) !important; }
+.first-timers-page .text-slate-500 { color: var(--jclm-muted, #52665a) !important; }
+@media (max-width: 900px) {
+  .first-timer-admin-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Admin first-timer inviter autocomplete */
+.inviter-autocomplete { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.inviter-autocomplete > label { color: var(--jclm-ink, #17251e); font-size: 13px; font-weight: 700; }
+.inviter-autocomplete > label span { color: #c62828; }
+.inviter-helper { margin: 2px 0 0; color: var(--jclm-muted, #52665a); font-size: 12px; }
+.admin-inviter-results { position: relative; z-index: 20; width: 100%; max-height: 220px; overflow-y: auto; border: 1px solid var(--jclm-border, #d4e8db); border-radius: 10px; background: var(--jclm-surface, #fff); box-shadow: 0 12px 28px rgba(0,0,0,.12); }
+.admin-inviter-results .member-result-option { width: 100%; text-align: left; color: var(--jclm-ink, #17251e); }
+
+/* JCLM church logo: branding only; all functional Lucide icons remain unchanged. */
+.jclm-header-logo { width: 42px; height: 42px; object-fit: contain; flex: 0 0 42px; border-radius: 10px; }
+.church-logo-mark { padding: 6px; overflow: hidden; }
+.church-logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.login-logo-mark { padding: 5px; overflow: hidden; }
+.login-logo-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* Logo placement correction: church logo replaces only the HARVEST OPS brand cross.
+   Internal admin modules keep their normal functional icons and clean page headings. */
+.sidebar-church-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 3px;
+}
+.jclm-header-logo { display: none !important; }
+.module-brand-logo { display: none !important; }
+
+/* HARVEST OPS readiness fixes: enforce readable theme-aware native controls and notices. */
+.app-shell[data-theme="light"] input:not([type="checkbox"]):not([type="radio"]),
+.app-shell[data-theme="light"] select,
+.app-shell[data-theme="light"] textarea,
+.app-shell[data-theme="light"] .form-control,
+.app-shell[data-theme="light"] .member-search-input {
+  background: #fff !important;
+  color: #202a38 !important;
+  border-color: #cbd9ce !important;
+  color-scheme: light !important;
+}
+.app-shell[data-theme="light"] input::placeholder,
+.app-shell[data-theme="light"] textarea::placeholder,
+.app-shell[data-theme="light"] .form-control::placeholder,
+.app-shell[data-theme="light"] .member-search-input::placeholder {
+  color: #617064 !important;
+  opacity: 1 !important;
+}
+.app-shell[data-theme="light"] .setup-note,
+.app-shell[data-theme="light"] .member-privacy-note,
+.app-shell[data-theme="light"] .welcome-panel .rounded-lg.border.border-emerald-200,
+.app-shell[data-theme="light"] .tactical-card p[role="alert"],
+.app-shell[data-theme="light"] .tactical-card p[role="status"] {
+  color: #174b32 !important;
+  background: #eaf6ee !important;
+  border-color: #b9dec6 !important;
+}
+.app-shell[data-theme="light"] [role="dialog"],
+.app-shell[data-theme="light"] .fixed.inset-0 form {
+  color: #202a38;
+}
+.app-shell[data-theme="light"] .fixed.inset-0 form input,
+.app-shell[data-theme="light"] .fixed.inset-0 form select,
+.app-shell[data-theme="light"] .fixed.inset-0 form textarea {
+  background: #fff !important;
+  color: #202a38 !important;
+  border-color: #cbd9ce !important;
+}
+.app-shell[data-theme="dark"] input,
+.app-shell[data-theme="dark"] select,
+.app-shell[data-theme="dark"] textarea,
+.app-shell[data-theme="dark"] .form-control,
+.app-shell[data-theme="dark"] .member-search-input {
+  background: #14251b !important;
+  color: #edf7ef !important;
+  border-color: #3b5946 !important;
+  color-scheme: dark;
+}
+.app-shell[data-theme="dark"] input::placeholder,
+.app-shell[data-theme="dark"] textarea::placeholder,
+.app-shell[data-theme="dark"] .form-control::placeholder,
+.app-shell[data-theme="dark"] .member-search-input::placeholder { color: #b0c3b5 !important; opacity: 1 !important; }
